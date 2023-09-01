@@ -1,15 +1,12 @@
 import sys
 input = sys.stdin.readline
+n, m = map(int, input().split())
+A = set(map(int, input().split()))
 
-a, b = map(int, input().split())
-A = {}
 cnt = 0
 
-for i in map(int,input().split()):
-  A[i] = 1
-
-for B in map(int,input().split()):
-  if B in A:
+for b in map(int, input().split()):
+  if b in A:
     cnt += 1
 
-print(a+b-cnt*2)
+print(n+m-cnt*2)
